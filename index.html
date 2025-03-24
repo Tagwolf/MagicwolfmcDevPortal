@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MagicWolfMC DevPortal</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+  <!-- Meta -->
+  <meta name="description" content="Das offizielle Developer-Portal von MagicWolfMC – Updates, Bugtracker, Team, Roadmap und mehr.">
+  <meta name="theme-color" content="#6D28D9" />
+
+  <!-- Smooth Scroll -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute("href")).scrollIntoView({ behavior: "smooth" });
+        });
+      });
+    });
+  </script>
+
+  <style>
+    .light {
+      background: #f4f4f4;
+      color: #111;
+    }
+    .light .bg-gray-900, .light .bg-gray-800 { background-color: #e0e0e0 !important; color: #111 !important; }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white font-sans scroll-smooth">
+
+<!-- Theme Toggle Button -->
+<button onclick="document.body.classList.toggle('light')" class="fixed top-6 right-6 bg-gray-800 text-white px-4 py-2 rounded-full shadow-lg z-50">
+  ☀️ / 🌙
+</button>
+
+<!-- Header -->
+<header class="bg-gray-950 shadow-lg sticky top-0 z-40">
+  <div class="max-w-7xl mx-auto px-4 py-5 flex justify-between items-center animate__animated animate__fadeInDown">
+    <h1 class="text-3xl font-bold text-purple-400">MagicWolfMC DevPortal</h1>
+    <nav class="space-x-6">
+      <a href="#updates" class="hover:text-purple-300">Updates</a>
+      <a href="#bugs" class="hover:text-purple-300">Bugs</a>
+      <a href="#roadmap" class="hover:text-purple-300">Roadmap</a>
+      <a href="#releases" class="hover:text-purple-300">Releases</a>
+      <a href="#team" class="hover:text-purple-300">Team</a>
+      <a href="#faq" class="hover:text-purple-300">FAQ</a>
+      <a href="#downloads" class="hover:text-purple-300">Downloads</a>
+      <a href="#kontakt" class="hover:text-purple-300">Kontakt</a>
+    </nav>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="text-center py-24 px-4 bg-gradient-to-r from-purple-700 to-indigo-800 animate__animated animate__fadeIn">
+  <h2 class="text-5xl font-extrabold mb-4">Willkommen im MagicWolfMC DevPortal</h2>
+  <p class="text-xl text-gray-200 max-w-xl mx-auto">Hier findest du alles zu Bugs, Features, Team und Entwicklung des Servers. Direkt vom Dev-Team!</p>
+</section>
+
+<!-- Server Status -->
+<section class="text-center py-8 bg-gradient-to-r from-green-600 to-green-800">
+  <h2 class="text-2xl font-bold text-white mb-2">🟢 Server Status</h2>
+  <p class="text-white">MagicWolfMC ist aktuell <strong class="text-lime-300">ONLINE</strong></p>
+</section>
+
+<!-- Changelog / Updates -->
+<section id="updates" class="py-20 px-6 max-w-5xl mx-auto">
+  <h2 class="text-3xl font-bold mb-10 border-b border-purple-500 pb-2">📝 Changelog</h2>
+  <div class="relative border-l border-purple-400 space-y-10 pl-6">
+    <div class="ml-4">
+      <div class="text-purple-300 font-semibold">23. März 2025</div>
+      <div class="text-lg">DevPortal v2 gestartet – Neue Sektionen & Design</div>
+    </div>
+    <div class="ml-4">
+      <div class="text-purple-300 font-semibold">20. März 2025</div>
+      <div class="text-lg">Bugfixes im Teleport-System</div>
+    </div>
+  </div>
+</section>
+
+<!-- Bugs -->
+<section id="bugs" class="py-20 px-6 bg-gray-900">
+  <h2 class="text-3xl font-bold mb-6 border-b border-red-400 pb-2">🐞 Bugtracker</h2>
+  <div class="grid md:grid-cols-2 gap-6">
+    <div class="bg-red-900 bg-opacity-30 border border-red-400 rounded-xl p-4">
+      <h4 class="text-xl font-semibold text-red-300">[Offen] P H Fehler</h4>
+      <p class="text-sm text-gray-300">Der command /p h geht bei manchen Usern nicht.</p>
+    </div>
+    <div class="bg-green-900 bg-opacity-30 border border-green-400 rounded-xl p-4">
+      <h4 class="text-xl font-semibold text-green-300">[Behoben] Teleport Bug</h4>
+      <p class="text-sm text-gray-300">Unsichtbarer Block wurde gefixt in v1.3.2</p>
+    </div>
+  </div>
+</section>
+
+<!-- Roadmap -->
+<section id="roadmap" class="py-20 px-6 max-w-5xl mx-auto">
+  <h2 class="text-3xl font-bold mb-6 border-b border-yellow-400 pb-2">📌 Roadmap</h2>
+  <ul class="list-disc text-gray-300 ml-6 space-y-2">
+    <li>🧪 Neues Testsystem für Spieler-Bugs (geplant Q2 2025)</li>
+    <li>📦 Neues Plugin-System für Servermodule (in Entwicklung)</li>
+    <li>🌐 Öffentliche API für externe Tools (später)</li>
+  </ul>
+</section>
+
+<!-- Team (weitergeführt) -->
+<section id="team" class="py-20 bg-gray-900">
+  <h2 class="text-3xl font-bold text-center mb-10 text-purple-300">👥 Dev-Team</h2>
+  <div class="flex flex-wrap justify-center gap-8">
+    <div class="group relative bg-gray-800 p-6 rounded-xl w-64 hover:shadow-xl transition">
+      <h3 class="text-xl font-bold text-purple-400">TagWolf</h3>
+      <p class="text-sm text-gray-300">Lead Dev</p>
+      <div class="absolute top-0 left-0 w-full h-full bg-black bg-opacity-80 text-white p-4 hidden group-hover:flex items-center justify-center">
+        Minecraft-Architekt, Backend-Ninja & Kreativboss.
+      </div>
+    </div>
+    <div class="group relative bg-gray-800 p-6 rounded-xl w-64 hover:shadow-xl transition">
+      <h3 class="text-xl font-bold text-purple-400">NightwolfLG</h3>
+      <p class="text-sm text-gray-300">UI/UX Designer</p>
+      <div class="absolute top-0 left-0 w-full h-full bg-black bg-opacity-80 text-white p-4 hidden group-hover:flex items-center justify-center">
+        Design Visionärin mit Liebe für Details und Farben.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Fortsetzung folgt ... -->
+<section class="py-16 bg-gray-800 text-center">
+  <h2 class="text-3xl font-bold text-purple-300 mb-6">🗳️ Feature-Voting</h2>
+  <p class="text-gray-300 mb-4">Was soll als Nächstes kommen?</p>
+  <div class="space-y-2 max-w-sm mx-auto">
+    <button class="w-full bg-purple-600 hover:bg-purple-700 py-2 rounded">🧪 Testwelt</button>
+    <button class="w-full bg-purple-600 hover:bg-purple-700 py-2 rounded">⚔️ PvP Arena</button>
+    <button class="w-full bg-purple-600 hover:bg-purple-700 py-2 rounded">🏠 Grundstückssystem</button>
+  </div>
+</section>
+
+<section class="py-20 bg-gray-800">
+  <h2 class="text-3xl font-bold text-center mb-10 text-indigo-300">📥 Downloads</h2>
+  <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+    <a href="#" class="block bg-gray-700 p-6 rounded-xl hover:bg-indigo-700 transition">
+      <h3 class="text-xl font-bold text-white">🔧 MagicLauncher (Win)</h3>
+      <p class="text-gray-300">Letzte Version: 1.0.4 – 64 MB</p>
+    </a>
+    <a href="#" class="block bg-gray-700 p-6 rounded-xl hover:bg-indigo-700 transition">
+      <h3 class="text-xl font-bold text-white">🎨 Texturepack HD</h3>
+      <p class="text-gray-300">Version: 128x - 23 MB</p>
+    </a>
+  </div>
+</section>
